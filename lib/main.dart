@@ -19,12 +19,31 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'App con Timer de Sesión',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.deepPurple,
           useMaterial3: true,
-          scaffoldBackgroundColor: Colors.grey[100],
+          scaffoldBackgroundColor: const Color(0xFFF5F5F5),
           appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.deepPurple,
             foregroundColor: Colors.white,
+            elevation: 0,
+            toolbarTextStyle: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+            titleTextStyle: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.deepPurple,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30),
+              ),
+              padding: const EdgeInsets.symmetric(vertical: 16),
+            ),
           ),
         ),
         home: const AuthWrapper(),

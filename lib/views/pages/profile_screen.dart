@@ -5,25 +5,30 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.person_pin, size: 100, color: Colors.green),
-            const SizedBox(height: 20),
-            Text(
-              'Estás en la Vista de Perfil',
-              style: Theme.of(context).textTheme.headlineSmall,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              'El temporizador de inactividad también está activo aquí. Toca la pantalla para reiniciarlo.',
-              textAlign: TextAlign.center,
-            ),
-          ],
+    return Container(
+      color: Colors.purpleAccent.withOpacity(0.05),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.purpleAccent,
+                child: Icon(Icons.person_outline, size: 80, color: Colors.white),
+              ),
+
+              const SizedBox(height: 12),
+              Text(
+                'Aquí puedes ver la información de tu cuenta. El temporizador de inactividad sigue activo.',
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  color: Colors.grey[700],
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
       ),
     );

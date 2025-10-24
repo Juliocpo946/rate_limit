@@ -23,7 +23,7 @@ class _MainAppShellState extends State<MainAppShell> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_currentIndex == 0 ? 'Vista Principal' : 'Perfil'),
+        title: Text(_currentIndex == 0 ? 'Inicio' : 'Perfil'),
         actions: [
           IconButton(
             icon: const Icon(Icons.logout),
@@ -45,13 +45,17 @@ class _MainAppShellState extends State<MainAppShell> {
             _currentIndex = index;
           });
         },
+        selectedItemColor: Colors.deepPurple,
+        unselectedItemColor: Colors.grey[600],
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Principal',
+            icon: Icon(Icons.home_outlined),
+            activeIcon: Icon(Icons.home),
+            label: 'Inicio',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.person_outline),
+            activeIcon: Icon(Icons.person),
             label: 'Perfil',
           ),
         ],

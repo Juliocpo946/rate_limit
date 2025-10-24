@@ -5,25 +5,26 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(Icons.timer, size: 100, color: Colors.blue),
-            const SizedBox(height: 20),
-            Text(
-              'Estás en la Vista Principal',
-              style: Theme.of(context).textTheme.headlineSmall,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 10),
-            const Text(
-              'Deja de interactuar con la app por 5 minutos (o el tiempo configurado) para que la sesión se cierre automáticamente.',
-              textAlign: TextAlign.center,
-            ),
-          ],
+    return Container(
+      color: Colors.deepPurple.withOpacity(0.05),
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.home_work_outlined, size: 120, color: Colors.deepPurple),
+              const SizedBox(height: 24),
+              const SizedBox(height: 12),
+              Text(
+                'Tu sesión se cerrará automáticamente por inactividad. Mantente activo para evitarlo.',
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  color: Colors.grey[700],
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
         ),
       ),
     );
